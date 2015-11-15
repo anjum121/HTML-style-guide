@@ -106,18 +106,37 @@ Whenever possible, avoid superfluous parent elements when writing HTML. Many tim
 ```
 
 
-###### Reducing markup
-----
+###### Forms
+---
+* Wrap radio and checkbox inputs and their text in <label>s. No need for for attributes here—the wrapping automatically associates the two.
+* Form buttons should always include an explicit type. Use primary buttons for the `type="submit"` button and regular buttons for `type="button"`
 
-Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:
-```javascript
-<!-- Not so great -->
-<span class="avatar">
-  <img src="...">
-</span>
 
-<!-- Better -->
-<img class="avatar" src="...">
+
+###### Tables
+---
+* Make use of `<thead>`, `<tfoot>`, `<tbody>`, and `<th>` tags (and scope attribute) when appropriate
+
+ ```javascript
+<table summary="This is a chart of invoices for 2011.">
+  <thead>
+    <tr>
+      <th scope="col">Table header 1</th>
+      <th scope="col">Table header 2</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table footer 1</td>
+      <td>Table footer 2</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table data 1</td>
+      <td>Table data 2</td>
+    </tr>
+  </tbody>
+</table>
 ```
-
 
