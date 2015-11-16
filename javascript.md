@@ -7,10 +7,17 @@
 * Unit test cases should be written from beginning of the development across various functionalities using Jasmin/Karma and Protractor for end to end testing.
 * Use NGDoc/JSDoc to generate a complete HTML documentation website.
 * Use the AngularUI Router for client-side routing.
+* Exception handling : Use a decorator at configuration time using the `$provide` service on the `$exceptionHandler` service to perform custom actions when exceptions occur.
+* Code modularization principle to be followed which means separate files maintained for configuration, routing, views etc.
+* Use `$document` and `$window` instead of document and window.
+* Use `$timeout` and `$interval` instead of `setTimeout` and `setInterval`.
+* Use consistent names for all controllers named after their feature. Use UpperCamelCase for controllers, as they are constructors.
+* Append the controller name with the suffix Controller.
+* Don’t put business logic in controller, it should be written in services.
 ----
 ### Single Responsibility
 ----
-
+	
 * Define 1 component per file.
 
  The following example defines the `app` module and its dependencies, defines a controller, and defines a factory all in the same file.
